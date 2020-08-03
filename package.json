@@ -1,0 +1,23 @@
+{
+  "name": "eleventy-auth0-serverless-mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cfjedimaster/eleventy-auth0-serverless-mongo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cfjedimaster/eleventy-auth0-serverless-mongo/issues"
+  },
+  "homepage": "https://github.com/cfjedimaster/eleventy-auth0-serverless-mongo#readme",
+  "dependencies": {
+    "mongodb": "^3.6.0"
+  }
+}

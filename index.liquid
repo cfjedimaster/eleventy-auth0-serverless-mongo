@@ -1,1 +1,9 @@
-Hello
+---
+layout: main
+---
+
+<h2>Films</h2>
+<ul>
+{% for film in films %}
+	<li><a href="films/{{film.title | slug }}/">{{film.title}}</a></li>
+{% endfor %}

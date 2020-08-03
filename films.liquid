@@ -1,0 +1,14 @@
+---
+layout: main
+pagination:
+   data: films
+   alias: film
+   size: 1
+permalink: "/films/{{ film.title | slug }}/index.html"
+---
+
+<h2>{{ film.title }}</h2>
+
+<p>
+	{{ film.description }}
+</p>
