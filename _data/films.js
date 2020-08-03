@@ -4,7 +4,6 @@ const url = process.env.MONGO_URL;
 
 module.exports = async function() {
     let films = await getFilms();
-	console.log('films', films);
     return films;
 }
 
