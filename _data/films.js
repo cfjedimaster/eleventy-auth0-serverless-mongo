@@ -15,5 +15,7 @@ async function getFilms() {
   	const films = db.collection('films');
 
 	const query = { "public": true };
-	return await films.find(query).toArray();
+	const filmArray = await films.find(query).toArray();
+	await client.close();
+	return filmArray;
 }
