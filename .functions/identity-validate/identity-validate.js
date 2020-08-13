@@ -13,7 +13,7 @@ exports.handler = async (event, context) => {
 
   let me = {
     email:user.email, 
-    name:user.user_metadata.full_name;
+    name:user.user_metadata.full_name
   }
   console.log('me', JSON.stringify(me));
 
