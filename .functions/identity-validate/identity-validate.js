@@ -2,10 +2,11 @@
 exports.handler = async (event, context) => {
   console.log('identity-validate');
   console.log(event.body);
+  let data = JSON.parse(event.body);
   if(event.body) console.log('event.body');
-  if(event.body.user) console.log('event.body.user');
+  if(data.user) console.log('event.body.user');
   
-  let user = event.body.user;
+  let user = data.user;
   if(!user) {
     console.log('no user??');
     return {
