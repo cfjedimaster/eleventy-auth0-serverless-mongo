@@ -2,7 +2,9 @@
 exports.handler = async (event, context) => {
   console.log('identity-validate');
   console.log(event.body);
-
+  if(event.body) console.log('event.body');
+  if(event.body.user) console.log('event.body.user');
+  
   let user = event.body.user;
   if(!user) {
     console.log('no user??');
