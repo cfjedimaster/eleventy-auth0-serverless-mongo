@@ -3,8 +3,6 @@ exports.handler = async (event, context) => {
   console.log('identity-validate');
   console.log(event.body);
   let data = JSON.parse(event.body);
-  if(event.body) console.log('event.body');
-  if(data.user) console.log('event.body.user');
   
   let user = data.user;
   if(!user) {
@@ -21,10 +19,6 @@ exports.handler = async (event, context) => {
   console.log('me', JSON.stringify(me));
 
   /*
-	var me = new user({
-		email:profile.emails[0].value,
-		name:profile.displayName
-	});
 
 	user.findOne({email:me.email}, function(err, u) {
 		if(!u) {
