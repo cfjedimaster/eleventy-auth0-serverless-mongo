@@ -1,7 +1,7 @@
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 exports.handler = async (event, context) => {
   console.log('identity-login');
-  console.log(event.body);
+  console.log(event.body.user);
   try {
     const subject = event.queryStringParameters.name || 'World'
     return {
