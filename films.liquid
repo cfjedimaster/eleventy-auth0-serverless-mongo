@@ -5,6 +5,8 @@ pagination:
    alias: film
    size: 1
 permalink: "/films/{{ film.title | slug }}/index.html"
+eleventyComputed:
+   title: "{{ film.title }}"
 ---
 
 <h2>{{ film.title }}</h2>
@@ -12,3 +14,22 @@ permalink: "/films/{{ film.title | slug }}/index.html"
 <p>
 	{{ film.description }}
 </p>
+
+<h3>Comments</h3>
+<div id="commentList">
+</div>
+
+<div id="commentForm">
+   <h3>Add Comment</h3>
+   <form>
+      <div class="form-group">
+         <label for="comments">Your Comments</label>
+         <textarea id="comments" class="form-control"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary disabled" title="Login to Comment" id="addCommentButton">Add Comment</button>
+   </form>
+</div>
+
+<script>
+window.filmId = '{{ film._id }}';
+</script>

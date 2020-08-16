@@ -1,6 +1,6 @@
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 exports.handler = async (event, context) => {
-  console.log('identity-validate');
+  console.log('identity-validate!');
   console.log(event.body);
   let data = JSON.parse(event.body);
   
@@ -36,7 +36,7 @@ exports.handler = async (event, context) => {
   try {
     return {
       statusCode: 200,
-      body: '',
+      body: JSON.stringify(me),
     }
   } catch (err) {
     return { statusCode: 500, body: err.toString() }
