@@ -32,6 +32,8 @@ function init() {
 		console.log('login', user);
 		loginBtn.classList.add('d-none');
 		logoutBtn.classList.remove('d-none');
+		let acButton = document.querySelector('#addCommentButton');
+		if(acButton) acButton.classList.remove('disabled');
 	});
 
 	netlifyIdentity.on('logout', () => {
